@@ -1,0 +1,36 @@
+package com.walk.serversocket;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import javax.swing.JOptionPane;
+
+public class ServerListener extends Thread {
+	@Override
+	/**
+	 * main方法启动此线程
+	 * 启动后阻塞，直到接收到链接
+	 * 将接收到的socket交给chatsocket处理，并添加到chatmanager
+	 */
+	public void run() {
+		//1-65535
+		try {
+			ServerSocket serverSocket = new ServerSocket(12345);
+			while(true) {
+				//block 阻塞当前的线程
+				Socket socket = serverSocket.accept();
+				//建立链接
+//				JOptionPane.showMessageDialog(null, "有客户端连接到了本机的12345端口");
+				//将socket传递给新的线程
+//				new ChatSocket(socket).start();
+				ChatSocket chatSocket = new ChatSocket(socket);
+				chatSocket.start();
+				ChatManager.getChatManager().add(chatSocket);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,27 @@
+package com.walk.socketclient;
+
+import com.walk.socketclientview.MainWindow;
+
+public class ChatManager {
+	private ChatManager() {};
+	private static final ChatManager instance = new ChatManager();
+	public static ChatManager getChatManager() {
+		return instance;
+	}
+	
+	MainWindow window;
+	public void setWindow(MainWindow window) {
+		this.window = window;
+		window.appendText("文本框已经和ChatManager绑定了");
+	}
+	/**
+	 * 实现连接服务器的操作
+	 * @param ip
+	 */
+	public void connect(String ip) {
+		
+	}
+	public void send(String out) {
+		
+	}
+}

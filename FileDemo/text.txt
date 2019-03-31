@@ -1,0 +1,9 @@
+http://www.btjy66.com/shukongpaomoqiegeji/2.html
+"|--"+
+/FileDemo
+seth.add("A");
+		seth.add("B");
+		seth.add("C");
+		seth.add("D");
+		seth.add("E");
+		seth.add("F");

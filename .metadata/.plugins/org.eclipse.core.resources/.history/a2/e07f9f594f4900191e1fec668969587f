@@ -1,0 +1,28 @@
+package com.walk.serversocket;
+
+import java.util.Vector;
+
+public class ChatManager {
+	//单例化处理
+	private ChatManager() {};
+	//初始化一个唯一的实例，
+	private static final ChatManager cm = new ChatManager();
+	//可以通过这个类来调用这个实例
+	public static ChatManager getChatManager() {
+		return cm;
+	}
+	
+	Vector<ChatSocket> vector = new Vector<ChatSocket>();
+	
+	public void add(ChatSocket cs) {
+		vector.add(cs);
+	}
+	public void publish(ChatSocket cs,String out) {
+		for (int i = 0; i < vector.size(); i++) {
+			ChatSocket chatSocket = vector.get(i);
+			if (!cs.equals(chatSocket)) {
+				chatSocket.out(out);
+			}
+		}
+	}
+}

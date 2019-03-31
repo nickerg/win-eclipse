@@ -1,0 +1,23 @@
+package com.walk.socketclient;
+
+import java.awt.EventQueue;
+
+import com.walk.socketclientview.MainWindow;
+
+public class SocketClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainWindow frame = new MainWindow();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+}

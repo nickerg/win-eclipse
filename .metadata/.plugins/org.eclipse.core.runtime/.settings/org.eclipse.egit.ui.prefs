@@ -1,0 +1,4 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>\u804A\u5929\u5BA2\u6237\u7AEF</message>\r\n<message>\u5F53\u67D0\u4E2Asocket\u53D1\u9001\u6D88\u606F\u540E\uFF0C\u5176\u5B83\u6240\u6709\u7684socket\u90FD\u63A5\u6536\u6B64\u6D88\u606F\u3002</message>\r\n<message>\u5B9E\u73B0\u53EF\u4EE5\u5411\u7528\u6237\u8F93\u51FA\u7684ServerSocket\uFF0C\u5EFA\u7ACB\u7684\u5404\u4E2A\u7EBF\u7A0B\u72EC\u7ACB\uFF0C\u4E0D\u80FD\u76F8\u4E92\u901A\u4FE1</message>\r\n</messages>
+eclipse.preferences.version=1
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300

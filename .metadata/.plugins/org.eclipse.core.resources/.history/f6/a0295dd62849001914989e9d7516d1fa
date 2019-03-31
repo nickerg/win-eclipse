@@ -1,0 +1,5 @@
+package com.walk.serversocket;
+
+public class ChatManager {
+
+}

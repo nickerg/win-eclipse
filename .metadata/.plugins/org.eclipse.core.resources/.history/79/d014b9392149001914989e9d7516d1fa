@@ -1,0 +1,26 @@
+package com.walk.serversocket;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import javax.swing.JOptionPane;
+
+public class MyServersSocket02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//1-65535
+		try {
+			ServerSocket serverSocket = new ServerSocket(12345);
+			//block 阻塞当前的线程
+			Socket socket = serverSocket.accept();
+			//建立链接
+			JOptionPane.showMessageDialog(null, "有客户端连接到了本机的12345端口");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
